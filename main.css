@@ -1,0 +1,266 @@
+body {
+    background : linear-gradient(to right, rgba(0, 149, 255, 0.341), rgba(0, 149, 255, 0.787));
+    font-family: 'Oswald', sans-serif;
+    overflow-x : hidden;
+    /* overflow-y : hidden; */
+}
+
+.score-interface {
+    position : absolute;
+    width : 100vw;
+    height : 7vh;
+    background-color : rgb(62, 59, 59);
+    color : white;
+    margin-top : -10vh;
+    display : flex;
+    gap : 50px;
+    align-items : center;
+    z-index : 10;
+    font-weight : 400;
+}
+.score-interface .puttingchance {
+    margin-left : 100px;
+    font-size : 22px;
+    color : yellow;
+}
+.score-interface .puttingchance .chancenumber {
+    margin-left : 20px;
+    color : white;
+}
+.score-interface .balldistance {
+    font-size : 22px;
+}
+.score-interface .balldistance .distancetext {
+    color : skyblue;
+}
+.score-interface .balldistance .distancenumber {
+    color : white;
+    margin-left : 20px;
+}
+
+.user-interface {
+    width : 100vw;
+    height : 10vh;
+    background-color : rgb(255, 255, 255);
+    transform : translateY(90vh);
+    /* border-top : 1px solid gray; */
+    box-sizing: border-box;
+    position : relative;
+    z-index : 10;
+    display : flex;
+    align-items : center;
+}
+
+.towername {
+    font-weight : 900;
+    font-size : 27px;
+    position : absolute;
+    /* top : 17px; */
+    left : 50px;
+    letter-spacing : 0px;
+    background-image : linear-gradient(to right, lightgreen, blue);
+    background-clip : text;
+    color : transparent;
+}
+
+.currentfloor {
+    position : absolute;
+    font-weight : 700;
+    font-size : 24px;
+    /* top : 19px; */
+    left : 260px;
+    letter-spacing : 0px;
+    /* background-image : linear-gradient(to right, lightgreen, blue); */
+    color : rgba(8, 8, 8, 0.795);
+    /* background-clip : text; */
+    /* color : transparent; */
+}
+
+.gaugebar {
+    width : 300px;
+    height : 30px;
+    background : linear-gradient(to right, rgba(219, 19, 19, 0.198), rgba(219,19,19,1));
+    position : absolute;
+    border : 2px solid black;
+    border-radius : 10px;
+    box-sizing : border-box;
+    /* top : 17px; */
+    left : calc(50vw - 150px);
+    overflow : hidden;
+}   
+.gaugebar .gauge {
+    width : 5px;
+    height : 30px;
+    background-color : yellow;
+    transition : 2s;
+    transition-timing-function: linear;
+    animation-name : gaugemove;
+    animation-duration : 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.gaugebar .gauge.stop {
+    animation-name : none;
+}
+.btngroup {
+    position : absolute;
+    /* top : 17px; */
+    right : 6vw;
+    display : flex;
+    gap : 10px;
+}
+.btngroup button {
+    width : 100px;
+    height : 30px;
+    box-sizing: border-box;
+    outline : none;
+    cursor : pointer;
+    background-color : white;
+    border : 3.5px solid orange;
+    border-radius : 20px;
+    box-shadow: 2.5px 2.5px rgba(212, 9, 9, 0.601);
+    font-family: 'Bungee Spice', sans-serif;
+    font-size : 18px;
+    font-weight : 700;
+    word-spacing : 5px;
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing : -1px;
+    transition : .2s;
+}
+.btngroup button .text {
+    transform : translateY(1px);
+}
+.btngroup button:hover {
+    background-color : rgba(255, 166, 0, 0.336);
+    font-size : 21px;
+    font-weight : 700;
+}
+
+@keyframes gaugemove {
+    0% {
+        transform : translateX(0)
+    }
+    50% {
+        transform : translateX(300px);
+    }
+    100% {
+        transform : translateX(0);
+    }
+}
+
+.ball {
+    position : absolute;
+    width : 20px;
+    height : 20px;
+    background-color : white;
+    border-radius : 10px;
+    border : 1px solid black;
+    top : calc(80vh + 20px);
+    left : 25vw;
+    box-sizing: border-box;
+    transition : 2s;
+    transition-timing-function: linear;
+    z-index : 5;
+}
+
+
+.tower {
+    width : 70vw;
+    height : 10000px;
+    margin : 0 auto;
+    margin-top : 67vh;
+    box-sizing : border-box;
+    background : none;
+    transition : 1.5s;
+}
+.tower .rooftop {
+    height : 60px;
+    background-color : transparent;
+    border-left : 5px solid rgba(254, 252, 252, 0.462);
+    border-right : 5px solid rgba(254, 252, 252, 0.462);
+    border-bottom : 30px solid rgba(135, 207, 235, 0.441);
+    /* box-sizing : border-box; */
+    position : relative;
+}
+.tower .rooftop .hole {
+    width : 30px;
+    background-color : white;
+    height : 30px;
+    position : absolute;
+    top : 60px;
+    right : 10%;
+    z-index : 1;
+}
+.tower .rooftop .floor {
+    width : calc(100% + 10px);
+    height : 30px;
+    position : absolute;
+    left : -5px;
+    top : 60px;
+    background-color : rgba(4, 92, 19, 0.998);
+    border-top : 5px solid rgb(18, 215, 80);
+    box-sizing: border-box;
+}
+
+.tower .floor-100 {
+    height : 350px;
+    background-color : white !important;
+    border-left : 10px solid #1052bd86;
+    border-right : 10px solid #1052bd86;
+    border-bottom : 0px solid rgba(221, 210, 210, 0.735);
+    position : relative;
+    /* background-image : url("../images/skylounge.png"); */
+    background-size : 100%;
+    background-repeat : no-repeat;
+}
+.tower .floor-100 .hole {
+    width : 30px;
+    background-color : white;
+    height : 30px;
+    position : absolute;
+    top : 350px;
+    left : 15%;
+    z-index : 1;
+}
+.tower .floor-100 .floor {
+    width : calc(100%);
+    height : 30px;
+    position : absolute;
+    left : 0px;
+    top : 350px;
+    background-color: rgb(233, 219, 25);
+    border : 0px solid white;
+    box-sizing: border-box;
+    border-left : 10px solid transparent;
+    border-right : 10px solid transparent;
+    z-index : 1;
+}
+
+.tower .floor-99 {
+    height : 300px;
+    background-color : white;
+    border-left : 10px solid #1052bd86;
+    border-right : 10px solid #1052bd86;
+    /* border-bottom : 15px solid rgba(218, 25, 25, 0.735); */
+    position : relative;
+}
+.tower .floor-99 .hole {
+    width : 30px;
+    background-color : white;
+    height : 30px;
+    position : absolute;
+    top : 300px;
+    left : 40%;
+}
+.tower .floor-99 .floor {
+    width : calc(100%);
+    height : 30px;
+    position : absolute;
+    left : 0px;
+    top : 300px;
+    background-color: rgba(218, 25, 25, 0.735);
+    border : 0px solid white;
+    box-sizing: border-box;
+}
