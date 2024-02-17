@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Downward</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <script defer src="/js/common.js"></script>
+</head>
+<body>
+    <video src="/video/video_index.mp4" id="video_index" autoplay loop muted preload="auto">
+    </video>
+    <div class="wrapper">
+        <div class="main_section">
+            <img src="/images/logo.png" alt="DOWNWARD">
+            <div class="since">SINCE 2024</div>
+            <div class="btn_wrapper">
+                <button class="singleplay_btn" onclick="location.href='/singleplay'">Single Play</button>
+            </div>
+            <div class="btn_wrapper">
+                <button class="multiplay_btn" onclick="alert('Preparing.')">Multi Play</button>
+            </div>
+            <div class="copyright">
+                Copyright ⓒ <span class="year"></span>. Downward. All rights reserved.
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    document.querySelector('.year').innerText = new Date().getFullYear()
+</script>
+</html>

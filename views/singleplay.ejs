@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOWNWARD</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+    <link rel="stylesheet" href="/css/play.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <script defer src = "/js/singleplay.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/phaser@3.51.0/dist/phaser.js"></script>
+    <script defer src = "/js/common.js"></script>
+</head>
+
+
+<body>
+
+    <div class="user_interface">
+        <div class="tower_name">
+           <div class="text">
+            A TOWER [A-1]
+           </div>
+        </div>
+        <div class="current_floor">
+            <span class="text">
+            ROOFTOP (101F)
+            </span>
+        </div>
+        
+
+        <div class="gauge_bar">
+            <div class="gauge"></div>
+        </div>
+
+       <div class="btn_group">
+        <button class="gauge_stop_btn">
+            <span class="text">STOP</span>
+        </button>
+        <button class="reset_btn" disabled="true">
+            <span class="text">RESET</span>
+        </button>
+        <button class="change_direction_btn" disabled="true">
+            <span class="text">CHANCE</span>
+        </button>
+       </div>
+    </div>
+    
+    <div class="score_interface">
+        <div class="putting_chance">
+            <span class="text">PUTTING CHANCE</span>
+            <span class="chance_number">100</span>/<span class="total_chance">100</span>
+        </div>
+        <div class="ball_distance">
+            <span class="text">DISTANCE</span>
+            <span class="distance_number">0</span>M
+        </div>
+        <div class="tip">
+            <div class="text">
+                <span>TIP</span>
+                <span class="tip_contents"></span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- <div class="ball">
+    </div>
+    
+    <div class="tower">
+    
+        <div class="floor rooftop">
+            <div class="floor"></div>
+            <div class="hole"></div>
+            <div class="flag">
+                <img src="./images/flag.png" alt="flag">
+            </div>
+        </div>
+    
+        <div class="floor floor-100">
+            <div class="floor"></div>
+            <div class="hole"></div>
+        </div>
+    
+        <div class="floor floor-99">
+            <div class="floor"></div>
+            <div class="hole"></div>
+        </div>
+    
+        <div class="floor floor-98">
+            <div class="floor"></div>
+            <div class="hole"></div>
+        </div>
+    
+        <div class="floor floor-97">
+            <div class="floor"></div>
+            <div class="hole"></div>
+        </div>
+    
+        <div class="floor floor-96">
+            <div class="floor"></div>
+            <div class="hole"></div>
+        </div>
+    
+        <div class="floor floor-95">
+            <div class="floor"></div>
+            <div class="hole"></div>
+        </div>
+    
+        <div class="floor floor-94">
+            <div class="floor">
+                <div class="water">
+                    <div class="borderleftgrey"></div>
+                    <div class="borderleftblue"></div>
+                    <div class="test"></div>
+                </div>
+                <div class="land">
+                    <div class="landforcover"></div>
+                </div>
+            </div>
+            <div class="hole"></div>
+            <div class="ducktube">
+                <img src="./images/ducktube.png" alt="ducktube">
+            </div>
+        </div>
+    
+        <div class="floor floor-93">
+            <div class="floor">
+                <div class="borderleft"></div>
+                <div class="borderright"></div>
+                <div class="water"></div>
+            </div>
+            <div class="hole"></div>
+        </div>
+    
+        <div class="floor floor-92">
+            <div class="floor"></div>
+            <div class="hole"></div>
+        </div>
+    
+        <div class="floor floor-91">
+            <div class="floor"></div>
+            <div class="hole"></div>
+        </div>
+    
+    </div> -->
+    
+    <!-- <div class="waterforopacity-oceanpark">
+        <div class="landforcover"></div>
+    </div>
+    
+    <div class="waterforopacity-spa"></div> -->
+    
+</body>
+
+
+</html>
