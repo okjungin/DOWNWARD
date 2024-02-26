@@ -1,7 +1,7 @@
 * {
-    /* margin : 0; */
-    /* padding : 0; */
-    /* box-sizing : border-box; */
+    margin : 0; 
+    padding : 0;
+    box-sizing : border-box;
 }
 
 body {
@@ -56,11 +56,20 @@ body {
 .score-interface .tip .text {
     /* margin-left : 20px; */
 }
-.score_interface .tip .text span:first-child {
-    color : lightgreen;
-    visibility : hidden;
+
+.score_interface .tip {
+    visibility : hidden; 
 }
-.score_interface .tip .text .tip_contents {
+
+.score_interface .tip .text {
+    color : lightgreen;
+}
+
+.score_interface .tip.on {
+    visibility : visible; 
+}
+
+.score_interface .tip .tip_contents {
     margin-left : 20px;
     letter-spacing : .5px;
     color : rgb(255, 81, 0);
